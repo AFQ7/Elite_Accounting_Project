@@ -2,15 +2,16 @@
 
 class inputElements{
 
-function InBox($LaBle, $InType) // $LaBle is for adding a Label befor befor any input Element
+public function InBox($LaBle, $InType) // $LaBle is for adding a Label befor befor any input Element
 // $InType is for chosing type of input Elemnt (text, password, radio, email, file, etc.) 
 {
-    echo "$LaBle"; echo "<br>";
-    print(" <input type=\"$InType\"> "); echo "<br>";
+    $output = $LaBle.": <br>";
+    $output.= "<input type=\"$InType\"><br>";
+    return $output;
 }
 }
 
 $InputCall = new inputElements; 
-$InputCall->InBox("Username:", "text");
+echo $InputCall->InBox("Username", "text");
 
 ?>
